@@ -53,7 +53,7 @@
       "sudo docker pull centos:7",
       "sudo docker images",
       "sudo service docker stop",
-      "git clone https://github.com/flapjack/omnibus-flapjack.git && cd omnibus-flapjack && bundle install"
+      "git clone https://github.com/paologlim/omnibus-flapjack.git && cd omnibus-flapjack && bundle install"
     ]
   }]
 }

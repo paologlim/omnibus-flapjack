@@ -59,6 +59,8 @@ module OmnibusFlapjack
 
     def self.build_omnibus_cmd(pkg)
       omnibus_cmd = [
+        "git config --global user.email \"you@example.com\"",
+        "git config --global user.name \"Your Name\"",
         "if [[ -f /opt/rh/ruby193/enable ]]; then source /opt/rh/ruby193/enable; fi",
         "export PATH=$PATH:/usr/local/go/bin",
         "cd omnibus-flapjack",
@@ -68,8 +70,8 @@ module OmnibusFlapjack
         "bundle update omnibus-software",
         "bundle install --binstubs",
         "bin/omnibus build --log-level=info " +
-          "--override use_s3_caching:false " +
-          "--override use_git_caching:true " +
+        "--override use_s3_caching:false " +
+        "--override use_git_caching:true " +
           "flapjack",
         "cd /omnibus-flapjack/pkg"
       ]
